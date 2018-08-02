@@ -4,7 +4,7 @@ class Captain < ActiveRecord::Base
   def self.catamaran_operators
     #  includes(boats: :classifications).where(classifications: { name: 'Catamaran' })
     # Article.includes(:comments).where(comments: { visible: true })
-    includes(boats: :classifications).where(classifications: {name: 'catamaran'})
+    includes(boats: :classifications).where(classifications: {name: 'Catamaran'})
   end
 
 
