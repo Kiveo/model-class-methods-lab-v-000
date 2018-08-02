@@ -16,10 +16,9 @@ class Boat < ActiveRecord::Base
   end
 
   def self.alphabetical_order
-    order(:name).order('desc')
   end
   def self.last_three_alphabetically
-    alphabetical_order.limit(3).order('id desc')
+    order(:name).order('desc').limit(3)
   end
 
 end
