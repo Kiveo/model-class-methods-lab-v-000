@@ -10,8 +10,9 @@ class Classification < ActiveRecord::Base
   end
 
   #a method to collect the name == catamaran instances
-  def self.catamarans
-    all.where('name = ?', "catamaran")
+  def self.catamaran_ids
+    catas = all.where('name = ?', "catamaran")
+    catas.collect {|cata| cata.id}
   end
 
 end
