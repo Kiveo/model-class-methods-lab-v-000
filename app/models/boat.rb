@@ -6,5 +6,5 @@ class Boat < ActiveRecord::Base
   def self.first_five
     limit(5).order('id desc')
   end
-  
+
 end
