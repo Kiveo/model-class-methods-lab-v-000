@@ -7,4 +7,8 @@ class Boat < ActiveRecord::Base
     limit(5).order('id asc')
   end
 
+  def self.dinghy
+    where("length < ?", 20)
+  end
+
 end
