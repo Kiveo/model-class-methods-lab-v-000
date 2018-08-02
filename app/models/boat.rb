@@ -28,6 +28,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.with_three_classifications
+    includes(:classifications).group('boats.id').having('COUNT(*) = 3')
   end
 
   def self.longest #use for classifications longest boat
