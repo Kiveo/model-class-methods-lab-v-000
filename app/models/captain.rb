@@ -17,4 +17,8 @@ class Captain < ActiveRecord::Base
     where("id IN (?)", sailors.pluck(:id) & motorboaters.pluck(:id))
   end
 
+  def self.non_sailors
+    
+  end
+
 end
