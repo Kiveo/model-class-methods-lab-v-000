@@ -12,7 +12,4 @@ class Captain < ActiveRecord::Base
     #where b_c has catamaran_ids , see if any == captain_boats, return boats that do
 
   end
-  def boats_where_class_is_catamaran
-  end
-
 end
