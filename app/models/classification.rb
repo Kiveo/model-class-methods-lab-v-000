@@ -7,7 +7,7 @@ class Classification < ActiveRecord::Base
   end
 
   def self.longest #longest boat.
-    includes(:boats).order('length desc').limit(1)
+    Boat.longest.classifications
   end
 
 end
