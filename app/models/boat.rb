@@ -15,8 +15,11 @@ class Boat < ActiveRecord::Base
     where("length >= ?", 20)
   end
 
+  def self.alphabetical_order
+  end
   def self.last_three_alphabetically
-    order(:name).order('desc').limit(3)
+    a = order(:name)
+    a.limit(3).order('id desc')
   end
 
 end
