@@ -6,7 +6,7 @@ class Classification < ActiveRecord::Base
     all
   end
 
-  def self.longest #longest boat.
+  def self.longest #longest boat, uses boat's #longest
     Boat.longest.classifications
   end
 
