@@ -14,7 +14,9 @@ class Captain < ActiveRecord::Base
   end
 
   def self.talented_seafarers #returns captains of motorboats and sailboats('sailors')
-    where("id IN (?)", self.sailors.pluck(:id) & self.motorboaters.pluck(:id))
+    # where("id IN (?)", self.sailors.pluck(:id) & self.motorboaters.pluck(:id))
+    where("id IN (?)", self.sailors.pluck(:id) & self.motorboaters(:id))
+
   end
 
 end
