@@ -30,7 +30,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.longest #use for classifications longest boat
-    order('length desc').limit(1)
+    order('length desc').first
   end
 
 end
