@@ -4,7 +4,7 @@ class Boat < ActiveRecord::Base
   has_many    :classifications, through: :boat_classifications
 
   def self.first_five
-    limit(5).order('id desc')
+    limit(5).order('id asc')
   end
 
 end
