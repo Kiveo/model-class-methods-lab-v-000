@@ -5,6 +5,8 @@ class Captain < ActiveRecord::Base
     includes(boats: :classifications).where('classifications.name = ?', 'Catamaran').references(:classifications)
   end
 
-
+  def self.sailors #returns captains with sailboats
+    includes(boats: :classifications).where('classifications.name = ?', 'Sailboat').references(:classifications)
+  end
 
 end
