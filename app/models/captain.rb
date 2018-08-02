@@ -3,7 +3,7 @@ class Captain < ActiveRecord::Base
 
   def self.catamaran_operators
     #EX: User.includes(:posts).where('posts.name = ?', 'example').references(:posts)
-    includes(:boats :classifications).where('classifications.name = ?', 'Catamaran').references(:classifications)
+    includes(boats: :classifications).where('classifications.name = ?', 'Catamaran').references(:classifications)
   end
 
 
