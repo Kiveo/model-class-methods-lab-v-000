@@ -6,7 +6,7 @@ class Captain < ActiveRecord::Base
   end
 
   def self.sailors #returns captains with sailboats
-    includes(boats: :classifications).where('classifications.name = ?', 'Sailboat').references(:classifications).uniq
+    includes(boats: :classifications).where('classifications.name = ?', 'Sailboat').uniq
   end
 
 end
