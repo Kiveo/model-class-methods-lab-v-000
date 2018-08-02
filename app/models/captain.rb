@@ -6,7 +6,7 @@ class Captain < ActiveRecord::Base
   end
 
   def self.catamaran_operators #where captain > boats > boat_classifications = catamaran
-    # captain_boats compare to boat_classifications
+    # captain_boats compare to boat_classifications that contain the classification_id == catamaran
   end
 
 end
