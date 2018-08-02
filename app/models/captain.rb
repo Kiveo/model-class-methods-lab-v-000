@@ -3,7 +3,8 @@ class Captain < ActiveRecord::Base
 
   def self.catamaran_operators
     #EX: Article.includes(:comments).where("comments.visible = true").references(:comments)
-    includes(:classifications).where("classifications.name = ?", "catamaran").references(:classifications)
+    # Article.includes(:comments).where(comments: { visible: true })
+    includes(:classifications).where(name: {name: 'catamaran'})
   end
 
 
