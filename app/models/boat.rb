@@ -24,6 +24,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.sailboats
+    includes(:classifications).where('classifications.name = ?', 'Sailboat').uniq
   end
 
   def self.with_three_classifications
