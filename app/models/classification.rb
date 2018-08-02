@@ -9,4 +9,9 @@ class Classification < ActiveRecord::Base
   def self.longest #longest boat.
   end
 
+  #a method to collect the name == catamaran instances
+  def self.catamarans 
+    all.where('name = ?', "catamaran")
+  end 
+
 end
