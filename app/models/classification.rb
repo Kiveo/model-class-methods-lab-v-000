@@ -1,5 +1,3 @@
-require 'pry'
-
 class Classification < ActiveRecord::Base
   has_many :boat_classifications
   has_many :boats, through: :boat_classifications
@@ -13,7 +11,6 @@ class Classification < ActiveRecord::Base
 
   #a method to collect the name == catamaran instances
   def self.catamarans
-    binding.pry
     all.where('name = ?', "catamaran")
   end
 
